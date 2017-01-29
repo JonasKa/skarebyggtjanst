@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {ErbjudandeComponent} from "./erbjudande/erbjudande/erbjudande.component";
 
 const routes: Routes = [
   {
-    path: '',
-    children: []
+    path: 'erbjudande',
+    component: ErbjudandeComponent
   }
 ];
 

@@ -1,3 +1,4 @@
+@import "app/variables";
 /* You can add global styles to this file, and also import other style files */
 
 html {
@@ -8,9 +9,21 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 120px;
   font-family: "Arial";
+  color: @text-color;
 }
 
 .container {
   max-width: 660px;
 }
 
+.jumbotron {
+  position: relative;
+  //background: #000 url("../assets/temp/fjalltuga.png") center center;
+  background: #000 url("/assets/temp/linjal.jpg") center center;
+  //background: #000 url("../assets/temp/Takstolar2.jpg.png") center center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  color: white;
+}

@@ -3,13 +3,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ErbjudandeComponent } from './erbjudande/erbjudande/erbjudande.component';
 import {NoContentComponent} from "./no-content/no-content.component";
+import { LandingComponent } from './landing/landing.component';
+import { OmComponent } from './om/om.component';
+import { KontaktComponent } from './kontakt/kontakt.component';
+import { HeroComponent } from './hero/hero.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import {NoContentComponent} from "./no-content/no-content.component";
     FooterComponent,
     NavbarComponent,
     ErbjudandeComponent,
-    NoContentComponent
+    NoContentComponent,
+    LandingComponent,
+    OmComponent,
+    KontaktComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,

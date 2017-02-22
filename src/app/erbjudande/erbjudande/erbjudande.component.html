@@ -26,15 +26,50 @@
     <div class="card-block">
       <h3 class="card-title">
         <img src="../../../assets/images/logo-facebook.png"
-               alt="Länk till vår Facebook"
-               style="height: 60px;margin-right: 20px;"/>
+             alt="Länk till vår Facebook"
+             style="height: 60px;margin-right: 20px;"/>
         <img src="../../../assets/images/instagram_logo.png"
-               alt="Länk till vår Instagram"
-               style="height: 50px;margin-right: 20px;"/>
-        </h3>
+             alt="Länk till vår Instagram"
+             style="height: 50px;margin-right: 20px;"/>
+      </h3>
       <p class="card-text">
-        Följ oss på <a target="_blank" href="https://www.facebook.com/skarebyggtjanst/">Facebook</a> och <a target="_blank" href="https://www.instagram.com/skarebyggtjanst/">Instagram</a> där vi fortlöpande kommer att lägga ut information om våra projekt
+        Följ oss på <a target="_blank" href="https://www.facebook.com/skarebyggtjanst/">Facebook</a> och <a
+        target="_blank" href="https://www.instagram.com/skarebyggtjanst/">Instagram</a> där vi fortlöpande kommer att
+        lägga ut information om våra projekt
       </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <ng2-instagram-embed [shortCode]="'BQbKDCoFPPn'"></ng2-instagram-embed>
+    </div>
+  </div>
+
+ <!-- <div class="row">
+    <div class="col-sm-12">
+      junk
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      &lt;!&ndash; LightWidget WIDGET &ndash;&gt;
+      <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+      <iframe src="//lightwidget.com/widgets/7ededef0d3fd5cf49b42604a41c4b700.html" scrolling="no"
+              allowtransparency="true" class="lightwidget-widget"
+              style="width: 100%; border: 0; overflow: hidden;"></iframe>
+    </div>
+  </div>
+-->
+  <div class="row">
+    <div class="col-sm-6">
+      <div [innerHTML]="instaImageHtml"></div>
+    </div>
+    <div class="col-sm-6">
+      <!-- GET A SINGLE IMAGE-->
+      GET A SINGLE IMAGE as binary
+      <img src="https://instagram.com/p/BQbKDCoFPPn/media/?size=m"/>
     </div>
   </div>
 
@@ -67,7 +102,8 @@
         <li>äger och som dina föräldrar bor i</li>
       </ul>
       <p class="card-text">
-        Du får däremot inte skattereduktion för att bygga ett helt nytt hus och inte heller för om - och tillbyggnad av
+        Du får däremot inte skattereduktion för att bygga ett helt nytt hus och inte heller för om - och tillbyggnad
+        av
         nybyggda hus. Med nybyggt hus avses ett småhus som har värde år fem år eller yngre.
       </p>
       <a target="_blank"

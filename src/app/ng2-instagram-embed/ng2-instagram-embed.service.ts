@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {Jsonp} from "@angular/http";
+import {Jsonp, Http} from "@angular/http";
 import {Observable} from "rxjs";
 import "rxjs/add/operator/map";
 
@@ -12,10 +12,10 @@ import "rxjs/add/operator/map";
 @Injectable()
 export class Ng2InstagramEmbedService {
 
-  _instaOembedURL = 'https://api.instagram.com/oembed?url=http://instagr.am/p/{user}/&omitscript=false&callback=JSONP_CALLBACK';
+  _instaOembedURL = 'https://api.instagram.com/oembed?url=http://instagr.am/p/{user}/&omitscript=true&callback=JSONP_CALLBACK&hidecaption=false';
   _instaShortCodeURL = 'https://www.instagram.com/{user}/media/?min_id=1045341392067624850_3108326&callback=JSONP_CALLBACK';
 
-  constructor(private jsonp: Jsonp) {
+  constructor(private jsonp: Jsonp, private http: Http) {
   }
 
   public getOembedForShortCode(shortCode: string): Observable<any> {
@@ -33,16 +33,16 @@ export class Ng2InstagramEmbedService {
    * @returns {Observable<T>}
    */
   public getAllShortCodesForUserName(userName: string): Observable<string[]> {
-    return this.jsonp.get(this._instaShortCodeURL.replace('{user}', userName)).map(result => {
-      let jsonResult = result.json();
+    return this.http.get(this._instaShortCodeURL.replace('{user}', userName)).map(result => {
+      let jsonResult = result;
       //    this.instaImageHtml = jsonResult.html;
-      //  console.log('instaImageHtml: ' + this.instaImageHtml);
+      console.log('jsonResult: ' + jsonResult);
       return [];
-    }).share();
+    });
   }
 
   private getShortCode(feed: string): string {
-    return ''
+    return '';
   }
 
 }

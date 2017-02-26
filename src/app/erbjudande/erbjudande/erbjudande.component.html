@@ -24,52 +24,53 @@
 
   <div class="card">
     <div class="card-block">
-      <h3 class="card-title">
-        <img src="../../../assets/images/logo-facebook.png"
-             alt="Länk till vår Facebook"
-             style="height: 60px;margin-right: 20px;"/>
-        <img src="../../../assets/images/instagram_logo.png"
-             alt="Länk till vår Instagram"
-             style="height: 50px;margin-right: 20px;"/>
+      <h3 class="card-title img-fluid">
+        <a
+          target="_blank" href="https://www.instagram.com/skarebyggtjanst/">
+          <img src="../../../assets/images/instagram_logo.png"
+               alt="Länk till vår Instagram"
+               style="height: 50px;margin-right: 20px;"/>
+        </a>
+        Följ oss på Instagram
       </h3>
       <p class="card-text">
-        Följ oss på <a target="_blank" href="https://www.facebook.com/skarebyggtjanst/">Facebook</a> och <a
-        target="_blank" href="https://www.instagram.com/skarebyggtjanst/">Instagram</a> där vi fortlöpande kommer att
-        lägga ut information om våra projekt
+        Här lägger vi fortlöpande ut information om våra projekt
       </p>
     </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <ng2-instagram-image [shortCode]="'BQ3LSa5lj-Y'"></ng2-instagram-image>
+      </div>
+      <div class="col-sm-6">
+        <ng2-instagram-image [shortCode]="'BQ3LD-alxL9'"></ng2-instagram-image>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="https://instagram.com/p/BQ3K7m7FwEV/media/?size=l" class="img-fluid"/>
+      </div>
+      <div class="col-sm-6">
+        <img src="https://instagram.com/p/BQ3KtI3lkVY/media/?size=l" class="img-fluid"/>
+      </div>
+    </div>
+
   </div>
 
-  <div class="row">
-    <div class="col-sm-12">
-      <ng2-instagram-embed [shortCode]="'BQbKDCoFPPn'"></ng2-instagram-embed>
-    </div>
-  </div>
-
- <!-- <div class="row">
-    <div class="col-sm-12">
-      junk
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-12">
-      &lt;!&ndash; LightWidget WIDGET &ndash;&gt;
-      <script src="//lightwidget.com/widgets/lightwidget.js"></script>
-      <iframe src="//lightwidget.com/widgets/7ededef0d3fd5cf49b42604a41c4b700.html" scrolling="no"
-              allowtransparency="true" class="lightwidget-widget"
-              style="width: 100%; border: 0; overflow: hidden;"></iframe>
-    </div>
-  </div>
--->
-  <div class="row">
-    <div class="col-sm-6">
-      <div [innerHTML]="instaImageHtml"></div>
-    </div>
-    <div class="col-sm-6">
-      <!-- GET A SINGLE IMAGE-->
-      GET A SINGLE IMAGE as binary
-      <img src="https://instagram.com/p/BQbKDCoFPPn/media/?size=m"/>
+  <div class="card">
+    <div class="card-block">
+      <h3 class="card-title">
+        <a
+          target="_blank" href="https://www.facebook.com/skarebyggtjanst/">
+          <img src="../../../assets/images/logo-facebook.png"
+               alt="Länk till vår Facbook"
+               style="height: 50px;margin-right: 20px;"/>
+        </a>
+        Följ oss på Facebook
+      </h3>
+      <p class="card-text">
+        Ni kan även följa oss på Facebook
+      </p>
     </div>
   </div>
 

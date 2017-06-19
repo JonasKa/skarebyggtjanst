@@ -1,11 +1,14 @@
 import {Component} from '@angular/core';
 import {Router, NavigationEnd} from '@angular/router';
 
+declare var ga: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less']
 })
+
 export class AppComponent {
   private test: boolean;
 

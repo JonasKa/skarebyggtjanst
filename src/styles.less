@@ -6,15 +6,13 @@ html {
   min-height: 100%;
 }
 body {
-  /* Margin bottom by footer height */
-  margin-top: 70px;
   margin-bottom: 120px;
   font-family: "Arial";
   color: @text-color;
 }
 
 .container {
-  max-width: 660px;
+  //max-width: 660px;
 }
 
 .btn-primary {
@@ -23,6 +21,12 @@ body {
   border-color: @skare-orange;
   width: 100%;
   margin-top: 10px;
+}
+
+@media (min-width: @media-breakpoint-md) {
+  .btn-primary {
+    max-width: 240px;
+  }
 }
 
 .btn-primary:hover {

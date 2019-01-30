@@ -1,7 +1,6 @@
 import {Injectable} from "@angular/core";
-import {Jsonp, Http} from "@angular/http";
+import {HttpClient} from '@angular/common/http';
 import {Observable} from "rxjs";
-import "rxjs/add/operator/map";
 
 /**
  * Currently the instagram-embed.js script is included in order for the images to show up in Oembed scenarios, with a function
@@ -12,37 +11,17 @@ import "rxjs/add/operator/map";
 @Injectable()
 export class Ng2InstagramEmbedService {
 
-  _instaOembedURL = 'https://api.instagram.com/oembed?url=http://instagr.am/p/{user}/&omitscript=true&callback=JSONP_CALLBACK&hidecaption=false';
-  _instaShortCodeURL = 'https://www.instagram.com/{user}/media/?min_id=1045341392067624850_3108326&callback=JSONP_CALLBACK';
+    _instaOembedURL = 'https://api.instagram.com/oembed?url=http://instagr.am/p/{user}/&omitscript=true&callback=JSONP_CALLBACK&hidecaption=false';
+    _instaShortCodeURL = 'https://www.instagram.com/{user}/media/?min_id=1045341392067624850_3108326&callback=JSONP_CALLBACK';
 
-  constructor(private jsonp: Jsonp, private http: Http) {
-  }
+    constructor(private http: HttpClient) {
+    }
 
-  public getOembedForShortCode(shortCode: string): Observable<any> {
-    return this.jsonp.get(this._instaOembedURL.replace('{user}', shortCode))
-      .map(result => {
-        const jsonResult = result.json();
-        (window as any).instgrm.Embeds.process();
-        return jsonResult.html;
-      });
-  }
-
-  /**
-   * Using the suggestion mentioned here: http://stackoverflow.com/a/33783840
-   * @param userName
-   * @returns {Observable<T>}
-   */
-  public getAllShortCodesForUserName(userName: string): Observable<string[]> {
-    return this.http.get(this._instaShortCodeURL.replace('{user}', userName)).map(result => {
-      let jsonResult = result;
-      //    this.instaImageHtml = jsonResult.html;
-      console.log('jsonResult: ' + jsonResult);
-      return [];
-    });
-  }
-
-  private getShortCode(feed: string): string {
-    return '';
-  }
-
+    public getOembedForShortCode(shortCode: string): Observable<any> {
+        return this.http.jsonp(this._instaOembedURL.replace('{user}', shortCode), 'arne')
+            .pipe(result => {
+                (window as any).instgrm.Embeds.process();
+                return result['html'];
+            });
+    }
 }

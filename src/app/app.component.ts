@@ -1,24 +1,34 @@
-import {Component} from '@angular/core';
-import {Router, NavigationEnd} from '@angular/router';
+import {Component, ViewEncapsulation} from "@angular/core";
+import {NavigationEnd, Router} from "@angular/router";
 
 declare var ga: any;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  encapsulation: ViewEncapsulation.None,
 })
-
 export class AppComponent {
-  private test: boolean;
+
 
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         ga('set', 'page', event.urlAfterRedirects);
         ga('send', 'pageview');
+
+        if (event.urlAfterRedirects !== '/about#contact') {
+          window.scrollTo(0, 0);
+        }
+
+        const tree = router.parseUrl(router.url);
+        if (tree.fragment) {
+          const element: HTMLElement = document.querySelector("#" + tree.fragment) as HTMLElement;
+          if (element) { element.scrollIntoView(true); }
+
+        }
       }
     });
   }
-}
 
+}

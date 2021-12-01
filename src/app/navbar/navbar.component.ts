@@ -3,10 +3,10 @@ import {Component, OnInit, ElementRef, ViewChild} from '@angular/core';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.less']
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  @ViewChild('navbarToggler') navbarToggler:ElementRef;
+ // @ViewChild('navbarToggler') navbarToggler:ElementRef;
 
   constructor() { }
 
@@ -14,14 +14,14 @@ export class NavbarComponent implements OnInit {
   }
 
   navBarTogglerIsVisible() {
-    return this.navbarToggler.nativeElement.offsetParent !== null;
+   // return this.navbarToggler.nativeElement.offsetParent !== null;
   }
 
   collapseNav() {
-    if (this.navBarTogglerIsVisible()) {
+    //if (this.navBarTogglerIsVisible()) {
       console.log("ska collapsa!");
-      this.navbarToggler.nativeElement.click();
-    }
+     // this.navbarToggler.nativeElement.click();
+   // }
   }
 
 }

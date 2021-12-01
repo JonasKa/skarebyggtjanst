@@ -1,27 +1,31 @@
 # Skarebyggtjanst
+Confirmed with the following versions:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 
-## Development server
+## Pre req
+Installed nvm with these links:
+https://github.com/nvm-sh/nvm#installing-and-updating
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Usage:
 
-## Code scaffolding
+`nvm install 12`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`nvm ls`
 
-## Build
+`nvm use 12`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Updated `/Users/jonas/.zshrc` with export NVM_SYMLINK_CURRENT=true which exposes
+latest node version under 
+`/Users/jonas/.nvm/current -> /Users/jonas/.nvm/versions/node/v10.16.3`
 
-## Running unit tests
+This is pointed out as Node interpreter in IDEA.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Deploy instructions
+1. ng build (if problem with node-sass. Re install it as proposed)
+2. Connect with FTP (FileZilla on my Mac) and the westc.se user
+3. Update all the files, but ensure keep the .htaccess to ensure refresh of sub page
 
-## Running end-to-end tests
+## Google
+Search console: https://www.google.com/webmasters/tools/home?hl=sv
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+My business: https://business.google.com/b/108544088411092568628/dashboard/l/01144681403217630990?hl=sv&ppsrc=GMBS0&gmbsrc=se-sv-ha-se-z-gmb-s-z-h~bk-46163888903-c&utm_campaign=se-sv-ha-se-z-gmb-s-z-h~bk-46163888903-c&utm_medium=ha&utm_source=gmb

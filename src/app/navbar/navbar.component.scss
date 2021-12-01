@@ -1,7 +1,7 @@
-@import "../variables";
+@import "../styles/variables.scss";
 
 nav {
-  color: @text-color;
+  color: $text-color;
   background-color: white;
 }
 
@@ -11,14 +11,14 @@ nav {
   opacity: 0.8;
 }
 
-@media (max-width: @media-breakpoint-md) {
+@media (max-width: $media-breakpoint-md) {
   .navbar-brand img {
     height: 35px;
   }
 }
 
 .navbar-nav .nav-link {
-  color: @text-color;
+  color: $text-color;
   :active {
     color: green;
   }

@@ -18,7 +18,7 @@ async function deployToFtp() {
 
     await client.clearWorkingDir()
     await client.uploadFrom(".htaccess", ".htaccess");
-    await client.uploadFromDir("dist/westc")
+    await client.uploadFromDir("dist/skarebyggtjanst")
   }
   catch(err) {
     console.log(err);

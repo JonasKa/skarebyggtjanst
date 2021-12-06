@@ -1,5 +1,5 @@
-@import "bootstrap-variable-overrides.scss";                        // overrides bootstrap variables
-@import "../../../node_modules/bootstrap/scss/bootstrap.scss";      // bootstrap library from npm
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
 @import "bootstrap-extensions.scss";
-// theming
-@import "buttons.scss";
+@import "fade-in";
+

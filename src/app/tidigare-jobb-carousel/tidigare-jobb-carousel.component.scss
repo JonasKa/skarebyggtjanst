@@ -1,0 +1,14 @@
+ngb-carousel {
+  max-width: 640px;
+  background-size: cover;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+// Hack in order to make carousel full width in low res.
+@media (max-width: 576px) {
+  ngb-carousel {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}

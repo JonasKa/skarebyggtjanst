@@ -1,7 +1,7 @@
-$skare-orange_original : #F7A600;
-$skare-orange : fade($skare-orange_original, 70%);
+$skare-orange_original : rgba(247, 166, 0, 0.7);
+$skare-orange : rgba(247, 166, 0, 0.5);
 $footer-bkg: #a7a9ac;
-$text-color: darken($footer-bkg, 10);
+$text-color: #7d7e80;
 
 $media-breakpoint-sm: 567px;
 $media-breakpoint-md: 768px;

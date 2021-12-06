@@ -1,10 +1,9 @@
 @import "../styles/variables.scss";
 @import "../styles/fade-in.scss";
 
-body {
-  font-family: 'SourceSansPro-Regular', 'Arial', sans-serif;
-  color: $west-consulting-logo-grey;
-  font-size: 20px;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 html {
@@ -12,15 +11,52 @@ html {
   min-height: 100%;
 }
 
-.row {
-  margin: 0;
+body {
+  margin-bottom: 120px;
+  font-family: "Arial";
+  color: $text-color;
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
-    padding-right: 0;
-    padding-left: 0;
+.container {
+  //max-width: 660px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $skare-orange;
+  border-color: $skare-orange;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (min-width: $media-breakpoint-md) {
+  .btn-primary {
+    max-width: 240px;
   }
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: darken($skare-orange, 10%);
+  border-color: darken($skare-orange, 10%);
+}
+
+.pageContainer {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.card {
+  margin-top: 30px;
+  border: none;
+}
+
+.card-body {
+  padding: 0px 0px 30px;
+}
+
+.row {
+  // margin: 0;
 }
 
 .jumbotron {
@@ -40,7 +76,7 @@ html {
   }
 }
 
-.display-3 {
+.jumbotron .container .display-3 {
   font-size: 2.5rem;
 }
 
@@ -57,37 +93,6 @@ html {
 .takstolar {
   background: #000 url("../../assets/images/Takstolar2.jpg") center center;
   background-size: cover;
-}
-
-.btn-primary {
-  width: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.sunny-background {
-  background: $west-consulting-sand;
-}
-
-.westc-black-background {
-  //background: $west-consulting-logo-grey;
-  background: $west-consulting-blackish-background;
-}
-
-.westc-blue-background {
-  background: $west-consulting-blue;
-}
-
-.westc-text-color {
-  color: $west-consulting-logo-grey;
-}
-
-.westc-blue-text {
-  color: $west-consulting-blue;
-}
-
-.alternative-bg {
-  background: $west-consulting-light-gray-bg-color;
 }
 
 .has-padding {
@@ -165,7 +170,7 @@ h3, h4, h5 {
 h3 {
   letter-spacing: 2.8px;
   text-transform: uppercase;
-  border-bottom: 2px solid $west-consulting-blue;
+  border-bottom: 2px solid $skare-orange;
   display: inline-block;
 }
 
@@ -178,9 +183,11 @@ ul {
 section {
   font-family: 'SourceSansPro-ExtraLight', 'Arial', sans-serif;
   letter-spacing: 1.33px;
+
   h3 {
     margin-bottom: 40px;
   }
+
   p {
     padding-bottom: 15px;
   }
@@ -272,6 +279,7 @@ section {
 @media only screen and (min-width: 730px) {
   .jumbotron h1 {
     font-size: 100px;
+
     .container {
       margin: 0;
     }
@@ -281,6 +289,7 @@ section {
 @media only screen and (min-width: 1200px) {
   .jumbotron h1 {
     font-size: 120px;
+
     .container {
       margin: 0;
     }

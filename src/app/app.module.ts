@@ -14,6 +14,8 @@ import {OmCardComponent} from './card-components/om-card/om-card.component';
 import {KontaktaOssCardComponent} from './card-components/kontakta-oss-card/kontakta-oss-card.component';
 import {OmComponent} from "./om/om.component";
 import {ErbjudandeCardComponent} from './card-components/erbjudande-card/erbjudande-card.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {TidigareJobbCarouselComponent} from "./tidigare-jobb-carousel/tidigare-jobb-carousel.component";
 
 @NgModule({
   declarations: [
@@ -27,13 +29,15 @@ import {ErbjudandeCardComponent} from './card-components/erbjudande-card/erbjuda
     KontaktComponent,
     OmCardComponent,
     KontaktaOssCardComponent,
-    ErbjudandeCardComponent
+    ErbjudandeCardComponent,
+    TidigareJobbCarouselComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

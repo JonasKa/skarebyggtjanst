@@ -1,4 +1,4 @@
-import {Component, OnInit, ElementRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,22 +6,32 @@ import {Component, OnInit, ElementRef, ViewChild} from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
- // @ViewChild('navbarToggler') navbarToggler:ElementRef;
+  @ViewChild('navbarToggler') navbarToggler!: ElementRef;
 
-  constructor() { }
+  menuVisible = false;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
-  navBarTogglerIsVisible() {
-   // return this.navbarToggler.nativeElement.offsetParent !== null;
+
+  toggleNav() {
+    this.menuVisible = !this.menuVisible;
+  }
+
+  calculateClasses() {
+    return {
+      'show': this.menuVisible
+    };
   }
 
   collapseNav() {
-    //if (this.navBarTogglerIsVisible()) {
+    if (this.menuVisible) {
       console.log("ska collapsa!");
-     // this.navbarToggler.nativeElement.click();
-   // }
+      this.navbarToggler.nativeElement.click();
+    }
   }
 
 }

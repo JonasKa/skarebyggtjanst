@@ -1,6 +1,6 @@
 # Skarebyggtjanst
 Confirmed with the following versions:
-
+- Node 12
 
 ## Pre req
 Installed nvm with these links:

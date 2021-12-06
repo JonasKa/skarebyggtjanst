@@ -1,27 +1,31 @@
 # Skarebyggtjanst
+Confirmed with the following versions:
+- Node 12
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
+## Pre req
+Installed nvm with these links:
+https://github.com/nvm-sh/nvm#installing-and-updating
 
-## Development server
+Usage:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`nvm install 12`
 
-## Code scaffolding
+`nvm ls`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`nvm use 12`
 
-## Build
+Updated `/Users/jonas/.zshrc` with export NVM_SYMLINK_CURRENT=true which exposes
+latest node version under 
+`/Users/jonas/.nvm/current -> /Users/jonas/.nvm/versions/node/v10.16.3`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+This is pointed out as Node interpreter in IDEA.
 
-## Running unit tests
+## Deploy instructions
+1. ng build (if problem with node-sass. Re install it as proposed)
+2. Connect with FTP (FileZilla on my Mac) and the westc.se user
+3. Update all the files, but ensure keep the .htaccess to ensure refresh of sub page
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Google
+Search console: https://www.google.com/webmasters/tools/home?hl=sv
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+My business: https://business.google.com/b/108544088411092568628/dashboard/l/01144681403217630990?hl=sv&ppsrc=GMBS0&gmbsrc=se-sv-ha-se-z-gmb-s-z-h~bk-46163888903-c&utm_campaign=se-sv-ha-se-z-gmb-s-z-h~bk-46163888903-c&utm_medium=ha&utm_source=gmb

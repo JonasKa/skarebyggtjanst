@@ -1,35 +1,12 @@
-<!-- Fixed navbar
 <header>
-<nav class="navbar navbar-expand-md fixed-top navbar-light">
-  <button #navbarToggler class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" routerLink="./"><img src="../../assets/images/logga_fixad.png" alt="Skåre Byggtjänst AB"/></a>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a (click)="collapseNav()" class="nav-link" routerLink="/erbjudande">Vi erbjuder <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a (click)="collapseNav()" class="nav-link" routerLink="/om">Om Skåre Byggtjänst</a>
-      </li>
-      <li class="nav-item">
-        <a (click)="collapseNav()" class="nav-link" routerLink="/kontakt">Kontakta oss</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-</header>-->
-<header>
-
 <nav class="navbar navbar-expand-md navbar-light">
   <a class="navbar-brand" routerLink="./"><img src="../../assets/images/logga_fixad.png" alt="Skåre Byggtjänst AB"/></a>
 
-  <button #navbarToggler class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+  <button #navbarToggler (click)="toggleNav()" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarCollapse">
+  <div class="collapse navbar-collapse" [ngClass]="calculateClasses()" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a (click)="collapseNav()" class="nav-link" routerLink="/erbjudande">Vi erbjuder <span class="sr-only">(current)</span></a>

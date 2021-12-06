@@ -1,0 +1,17 @@
+<ngb-carousel
+  *ngIf="getImagePaths()"
+  [showNavigationArrows]="viewOnly"
+  [showNavigationIndicators]="viewOnly"
+  [interval]="10000"
+ >
+  <ng-template ngbSlide *ngFor="let image of getImagePaths()">
+    <div class="picsum-img-wrapper">
+      <img [src]="image" alt="Random slide">
+    </div>
+    <div class="carousel-caption" *ngIf="!viewOnly">
+      <h3>Vårt erbjudande</h3>
+      <p>Vi utför arbeten inom de flesta områden</p>
+      <a routerLink="/erbjudande" class="btn btn-primary">Läs mer</a>
+    </div>
+  </ng-template>
+</ngb-carousel>

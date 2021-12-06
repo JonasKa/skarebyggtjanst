@@ -1,0 +1,338 @@
+@import "../styles/variables.scss";
+@import "../styles/fade-in.scss";
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 120px;
+  font-family: "Arial";
+  color: $text-color;
+}
+
+.container {
+  //max-width: 660px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $skare-orange;
+  border-color: $skare-orange;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (min-width: $media-breakpoint-md) {
+  .btn-primary {
+    max-width: 240px;
+  }
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: darken($skare-orange, 10%);
+  border-color: darken($skare-orange, 10%);
+}
+
+.pageContainer {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.card {
+  margin-top: 30px;
+  border: none;
+}
+
+.card-body {
+  padding: 0px 0px 30px;
+}
+
+.row {
+  // margin: 0;
+}
+
+.jumbotron {
+  position: relative;
+  background: #000 url("../../assets/images/linjal.jpg") center center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  color: white;
+  opacity: 0.8;
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 8rem 2rem;
+  }
+}
+
+.jumbotron .container .display-3 {
+  font-size: 2.5rem;
+}
+
+.linjal {
+  background: #000 url("../../assets/images/linjal.jpg") center center;
+  background-size: cover;
+}
+
+.skruvar {
+  background: #000 url("../../assets/images/skruvar_mindre.jpg") center center;
+  background-size: cover;
+}
+
+.takstolar {
+  background: #000 url("../../assets/images/Takstolar2.jpg") center center;
+  background-size: cover;
+}
+
+.has-padding {
+  padding: 150px 0;
+}
+
+.jumbotron {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  background-size: cover;
+  overflow: hidden;
+  color: white;
+  opacity: 1;
+  border-radius: 0;
+  margin-bottom: 0;
+  padding-top: 150px;
+}
+
+.call-to-action {
+  font-family: 'SourceSansPro-Medium', 'Arial', sans-serif;
+  border: 2px solid $west-consulting-blue;
+  background-color: $west-consulting-blue;
+  border-radius: 60px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 40px auto 60px;
+  line-height: 54px;
+  vertical-align: middle;
+  padding: 0 30px;
+  //text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 2px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+
+}
+
+.call-to-action a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.call-to-action:hover {
+  border: 2px solid #fff;
+  background-color: transparent
+}
+
+.white-box-with-shadow {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .19), 0 6px 10px rgba(0, 0, 0, .23);
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 8rem 2rem;
+  }
+}
+
+h1, h2 {
+  font-family: 'Tiempos-Headline-Black', 'Arial', sans-serif;
+}
+
+h3, h4, h5 {
+  font-family: 'SourceSansPro-Regular', 'Arial', sans-serif;
+}
+
+h3 {
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  border-bottom: 2px solid $skare-orange;
+  display: inline-block;
+}
+
+ul {
+  list-style-position: outside;
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+section {
+  font-family: 'SourceSansPro-ExtraLight', 'Arial', sans-serif;
+  letter-spacing: 1.33px;
+
+  h3 {
+    margin-bottom: 40px;
+  }
+
+  p {
+    padding-bottom: 15px;
+  }
+
+}
+
+.btn-west-consulting {
+  color: #fff;
+  background-color: $west-consulting-blue;
+}
+
+.btn-west-consulting:hover {
+  color: #fff;
+  background: $west-consulting-blue-darker;
+}
+
+.display-3 {
+  font-size: 2.5rem;
+}
+
+.top-border {
+  border-top: 1px solid $west-consulting-border-color;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.marketing h2 {
+  font-weight: normal;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  border-top: 1px solid $west-consulting-border-color;
+  color: $west-consulting-logo-grey;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-family: 'Tiempos-Headline-Black', 'Arial', sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+  margin: 2rem;
+}
+
+.jumbotron h1 {
+  font-size: 35px; // Looks good on iPhone 5 (320px width)
+}
+
+.quoted-heading {
+  margin: 2rem 0 0 1rem;
+  font-size: 25px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media only screen and (min-width: 400px) {
+  .jumbotron h1 {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .jumbotron h1 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 730px) {
+  .jumbotron h1 {
+    font-size: 100px;
+
+    .container {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .jumbotron h1 {
+    font-size: 120px;
+
+    .container {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 40em) {
+  .featurette-heading {
+    font-size: 50px;
+    margin: 4rem;
+  }
+  .quoted-heading {
+    font-size: 30px;
+    margin-top: 4rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin: 7rem;
+  }
+  .quoted-heading {
+    font-size: 30px;
+    margin-top: 7rem;
+  }
+}
+
+p .introduction {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.quotation {
+  font-family: 'Tiempos-Headline-Black', 'Arial', sans-serif;
+  font-style: italic;
+}
+
+a {
+  color: $west-consulting-logo-grey;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $west-consulting-blue;
+}

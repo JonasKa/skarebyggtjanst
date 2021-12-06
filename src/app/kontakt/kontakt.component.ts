@@ -4,11 +4,11 @@ import {ActivatedRoute, Params} from "@angular/router";
 @Component({
   selector: 'app-kontakt',
   templateUrl: './kontakt.component.html',
-  styleUrls: ['./kontakt.component.less']
+  styleUrls: ['./kontakt.component.scss']
 })
 export class KontaktComponent implements OnInit {
 
-  private tack: string;
+  tack = "";
 
   constructor(private route: ActivatedRoute) { }
 

@@ -6,7 +6,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {FooterComponent} from './footer/footer.component';
 import {NavbarComponent} from './navbar/navbar.component';
-import {ErbjudandeComponent} from './erbjudande/erbjudande.component';
+import {InformationComponent} from './information/information.component';
 //import {NoContentComponent} from "./no-content/no-content.component";
 import {LandingComponent} from './landing/landing.component';
 import {KontaktComponent} from './kontakt/kontakt.component';
@@ -23,7 +23,7 @@ import {TidigareJobbCarouselComponent} from "./tidigare-jobb-carousel/tidigare-j
     FooterComponent,
     NavbarComponent,
     OmComponent,
-    ErbjudandeComponent,
+    InformationComponent,
     // NoContentComponent,
     LandingComponent,
     KontaktComponent,

@@ -10,14 +10,13 @@ export class KontaktComponent implements OnInit {
 
   tack = "";
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.route.params
       .subscribe((params: Params) => {
         this.tack = params['tack'];
-        //return this.service.getHeroes();
       });
   }
-
 }

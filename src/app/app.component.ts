@@ -24,7 +24,9 @@ export class AppComponent {
         const tree = router.parseUrl(router.url);
         if (tree.fragment) {
           const element: HTMLElement = document.querySelector("#" + tree.fragment) as HTMLElement;
-          if (element) { element.scrollIntoView(true); }
+          if (element) {
+            element.scrollIntoView(true);
+          }
 
         }
       }

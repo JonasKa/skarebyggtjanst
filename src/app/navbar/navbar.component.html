@@ -1,23 +1,26 @@
 <header>
-<nav class="navbar navbar-expand-md navbar-light">
-  <a class="navbar-brand" routerLink="./"><img src="../../assets/images/logga_fixad.png" alt="Skåre Byggtjänst AB"/></a>
+  <nav class="navbar navbar-expand-md navbar-light">
+    <a class="navbar-brand" routerLink="./"><img src="../../assets/images/logga_fixad.png"
+                                                 alt="Skåre Byggtjänst AB"/></a>
 
-  <button #navbarToggler (click)="toggleNav()" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <button #navbarToggler (click)="toggleNav()" class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+            data-target="#navbarCollapse" aria-controls="navbarsExample04" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" [ngClass]="calculateClasses()" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a (click)="collapseNav()" class="nav-link" routerLink="/erbjudande">Vi erbjuder <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a (click)="collapseNav()" class="nav-link" routerLink="/om">Om Skåre Byggtjänst</a>
-      </li>
-      <li class="nav-item">
-        <a (click)="collapseNav()" class="nav-link" routerLink="/kontakt">Kontakta oss</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <div class="collapse navbar-collapse" [ngClass]="calculateClasses()" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a (click)="collapseNav()" class="nav-link" routerLink="/information">Information <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a (click)="collapseNav()" class="nav-link" routerLink="/om">Om Skåre Byggtjänst</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="collapseNav()" class="nav-link" routerLink="/kontakt">Kontakta oss</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </header>

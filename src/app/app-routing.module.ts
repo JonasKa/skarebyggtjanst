@@ -1,6 +1,6 @@
 import {NgModule} from "@angular/core";
 import {Routes, RouterModule} from "@angular/router";
-import {ErbjudandeComponent} from "./erbjudande/erbjudande.component";
+import {InformationComponent} from "./information/information.component";
 import {LandingComponent} from "./landing/landing.component";
 import {OmComponent} from "./om/om.component";
 import {KontaktComponent} from "./kontakt/kontakt.component";
@@ -8,11 +8,11 @@ import {KontaktComponent} from "./kontakt/kontakt.component";
 const routes: Routes = [
   {
     path: '',
-   component: LandingComponent
+    component: LandingComponent
   },
   {
-    path: 'erbjudande',
-    component: ErbjudandeComponent
+    path: 'information',
+    component: InformationComponent
   },
   {
     path: 'om',
@@ -37,4 +37,5 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

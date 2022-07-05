@@ -19,6 +19,7 @@ nav {
 
 .navbar-nav .nav-link {
   color: $text-color;
+
   :active {
     color: green;
   }
